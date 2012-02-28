@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+Test.run :default do |run|
+  run.files << 'spec/spec_*.rb'
+
+  require 'spectroscope'
+  require 'be'
+end
+
+Test.run(:cov) do |run|
+  run.files << 'spec/spec_*.rb'
+
+  require 'simplecov'
+
+  SimpleCov.start do
+    require 'spectroscope'
+    require 'be'
+
+    coverage_dir 'log/coverage'
+  end
+end
+
