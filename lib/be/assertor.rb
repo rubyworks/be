@@ -8,7 +8,7 @@ module Be
     def initialize(messages, criteria={})
       @messages   = messages
       @criteria   = criteria
-      @comparator = criteria[:cmp] || :==
+      @comparator = criteria[:compare] || :==
     end
 
     #
