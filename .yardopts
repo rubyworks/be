@@ -1,0 +1,9 @@
+--title Behaviroial Expectations
+--output-dir doc
+--protected
+--private
+--readme README.md
+lib
+-
+[A-Z]*.*
+
