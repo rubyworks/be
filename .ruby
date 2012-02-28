@@ -39,7 +39,7 @@ load_path:
 revision: 0
 created: '2012-02-27'
 summary: Behavior Expressive
-title: BE
+title: Be
 version: 0.1.0
 name: be
 description: ! "Behavior Expressive is an assertions library specifically designed
