@@ -41,12 +41,16 @@ module Be
     end
 
     alias_method :==, :pass?
-    alias_method :!=, :fail?
 
     alias_method :=~,  :assert!
-    alias_method :!~,  :refute! unless RUBY_VERSION < '1.9'
-
     alias_method :===, :assert!
+
+    # these only work with Ruby 1.9+
+    begin
+      alias_method :!=, :fail?
+      alias_method :!~, :refute!
+    rescue SyntaxError
+    end
 
   private
 
