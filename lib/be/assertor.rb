@@ -74,27 +74,39 @@ module Be
     def assert_message(target)
       #"#{target.inspect} #{@operator} #{@arguemnts.map{ |x| x.inspect }}"
 
-      args_pattern = []
-      args_inspect = []
+      s = "b"
+      r = target
 
-      s = "a"
-      [target, *@arguments].each do |a|
-        args_pattern << s
-        args_inspect << "#{s}) " + a.inspect
-        s = s.succ
+      sigs = []
+
+      @messages.each do |meth, args, blk|
+        vars = []
+        list = []
+
+        args.each do |a|
+          vars << s
+          list << "#{s}) " + a.inspect
+          s = s.succ
+        end
+
+        sigs << [meth, vars, list]
       end
 
-      msg = ''   
-      msg << "a.#{@operator}(" + args_pattern[1..-1].join(',') + ")\n"
-      msg << args_inspect.join("\n")
-      msg
+      msgs = []
+      vest = ["a) #{r.inspect}"]
+      sigs.each do |meth, vars, list|
+        msgs << "#{meth}(#{vars.join(', ')})"
+        vest << list.join("\n") unless list.empty?
+      end
+ 
+      "a." + msgs.join(".") + "\n" + vest.join("\n")
     end
 
     #
     #
     #
     def refute_message(target)
-      "NOT " + assert_message(target)
+      "! " + assert_message(target)
     end
 
     #
