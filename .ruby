@@ -42,7 +42,11 @@ summary: Behavior Expressive
 title: Be
 version: 0.1.0
 name: be
-description: ! "Behavior Expressive is an assertions library specifically designed
-  \nfor reuse by other test frameworks."
+description: ! 'Be (Behavioral expectations) is a fully versitle, light-weight and
+  BRASS
+
+  compliant assertions framework for Ruby. It utilizes an *assertor* design
+
+  (*matchers* in RSpec terminology) which meshes well with BDD nomenclatures.'
 organization: Rubyworks
 date: '2012-02-27'

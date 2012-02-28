@@ -1,2 +1,3 @@
-Behavior Expressive is an assertions library specifically designed 
-for reuse by other test frameworks.
+Be (Behavioral expectations) is a fully versitle, light-weight and BRASS
+compliant assertions framework for Ruby. It utilizes an *assertor* design
+(*matchers* in RSpec terminology) which meshes well with BDD nomenclatures.
