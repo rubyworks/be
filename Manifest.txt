@@ -1,10 +1,10 @@
 #!mast bin lib spec test [A-Z]*.*
 lib/be/assertor.rb
 lib/be/core_ext.rb
+lib/be/delegator.rb
 lib/be/errors.rb
+lib/be/kernel.rb
 lib/be/should.rb
-lib/be/tobe.rb
-lib/be/tohave.rb
 lib/be.rb
 spec/spec_be.rb
 spec/spec_have.rb

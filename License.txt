@@ -1,4 +1,4 @@
-Be - Behavior Expressive
+Be - Behavioral Expectations
 
 Copyright (c) 2012 Rubyworks. All rights expressly reserved.
 

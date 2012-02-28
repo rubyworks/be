@@ -49,7 +49,7 @@ which orgnaizes all calls made against it to use as expectations in the `Be::Ass
 
 Copyright (c) 2012 Rubyworks
 
-B.E. is distributable in accordance with the **FreeBSD** license.
+Be is distributable in accordance with the **FreeBSD** license.
 
 See License.txt for details.
 
