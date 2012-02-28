@@ -1,7 +1,13 @@
 module Be
 
+  # Delegator acts as the go-between between the subjunctive call
+  # and the Assertor.
   #
-  class BeDelegator < BasicObject
+  class Delegator < BasicObject
+
+    #
+    # Initialize new Delegator.
+    #
     def initialize(criteria={})
       @criteria = criteria
       @messages = []
@@ -9,15 +15,17 @@ module Be
 
     #
     # Convert to Assertor. If `@messages` is empty then
-    # defaults to calling `#==` with measure as argument.
+    # defaults to calling method given by `criteria[:default]`
+    # or `#==` failing that.
     #
     def to_assertor
       if @messages.empty?
+        default  = @criteria.delete(:default) || :==
         measure  = @criteria.delete(:measure)
-        messages = [[:==, [measure], nil]]
-        HaveAssertor.new(messages, @criteria)
+        messages = [[default, [measure], nil]]
+        Assertor.new(messages, @criteria)
       else
-        BeAssertor.new(@messages, @criteria)
+        Assertor.new(@messages, @criteria)
       end
     end
 
@@ -36,13 +44,6 @@ module Be
       self
     end
   end
-
-  # BeAssertor is effectively the same as Assertor base class.
-  #
-  class BeAssertor < Assertor
-  end
-
-  #ToBe = BeDelegator.new
 
 end
 

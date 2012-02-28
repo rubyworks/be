@@ -1,15 +1,15 @@
 describe "have method" do
 
   it "should return a to have delegator" do
-    assert Be::HaveDelegator === have
+    assert Be::Delegator === have
   end
 
   it "with argument should return a HaveAssertor" do
-    assert Be::HaveDelegator === have('string')
+    assert Be::Delegator === have('string')
   end
 
   it "should delegate and return an assertor" do
-    assert Be::HaveDelegator === have.anything
+    assert Be::Delegator === have.anything
   end
 
   it "should defualt to #include? by default" do
@@ -32,7 +32,7 @@ describe "have method" do
   end
 
   it "should handle method chains" do
-    assert(Be::HaveDelegator === have.size.to_s)
+    assert(Be::Delegator === have.size.to_s)
 
     "string".should have.size.to_s == '6'
   end

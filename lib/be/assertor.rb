@@ -6,8 +6,9 @@ module Be
 
     #
     def initialize(messages, criteria={})
-      @messages = messages
-      @criteria = criteria
+      @messages   = messages
+      @criteria   = criteria
+      @comparator = criteria[:cmp] || :==
     end
 
     #
@@ -18,7 +19,7 @@ module Be
       end
 
       if @criteria.key?(:measure)
-        @criteria[:measure] == result
+        @criteria[:measure].__send__(@comparator, result)
       else
         result
       end

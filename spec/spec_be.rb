@@ -1,19 +1,19 @@
 describe "be method" do
 
   it "should return a BeDelegator" do
-    assert Be::BeDelegator === be
+    assert Be::Delegator === be
   end
 
   it "should return a BeDelegator with argument" do
-    assert Be::BeDelegator === be('string')
+    assert Be::Delegator === be('string')
   end
 
   it "should return a BeDelegator when method called" do
-    assert Be::BeDelegator === be.anything
+    assert Be::Delegator === be.anything
   end
 
   it "should return a BeDelegator with argument and method called" do
-    assert Be::BeDelegator === be('something').anything
+    assert Be::Delegator === be('something').anything
   end
 
   it "should work as assert equal when measure is given" do
