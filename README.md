@@ -11,10 +11,11 @@
 
 <br/>
 
-Be is a fully versitle, light-weight and BRASS compliant assertions framework
+<b>Be is a fully versitle, light-weight and BRASS compliant assertions framework
 for Ruby. It utilizes an *assertor* design (*matchers* in RSpec terminology)
-which meshes well with BDD nomenclatures.
+which meshes well with BDD nomenclatures.</b>
 
+<br/>
 
 ## Instruction
 
