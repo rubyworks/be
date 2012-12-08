@@ -1,4 +1,6 @@
-#!mast bin lib spec test [A-Z]*.*
+#!mast .index .yardopts bin data demo lib spec test [A-Z]*.*
+.index
+.yardopts
 lib/be/assertor.rb
 lib/be/core_ext.rb
 lib/be/delegator.rb
@@ -8,6 +10,7 @@ lib/be/should.rb
 lib/be.rb
 spec/spec_be.rb
 spec/spec_have.rb
+Metadata.yml
 README.md
 History.md
 License.txt

@@ -1,0 +1,47 @@
+---
+name:
+  be
+
+version:
+  0.1.0
+
+title:
+  Be
+
+summary:
+  Behavior Expressive
+
+description:
+  Behavioral Expectations is a fully versitle, light-weight and BRASS
+  compliant assertions framework for Ruby. It utilizes an *assertor* design
+  (*matchers* in RSpec terminology) which meshes well with BDD nomenclatures.
+
+requirements:
+  - ansi
+  - brass
+  - detroit (build)
+  - spectroscope (test)
+
+resources:
+  home: http://rubyworks.github.com/be
+  code: http://github.com/rubyworks/be
+  docs: http://rubydoc.info/gems/be
+  wiki: http://wiki.github.com/rubyworks/be
+  bugs: http://github.com/rubyworks/be/issues
+  mail: http://groups.google.com/group/rubyworks-mailinglist
+
+repositories:
+  upstream: git://github.com/rubyworks/be.git
+
+organizations:
+  - Rubyworks
+
+authors:
+  - Trans <transfire@gmail.com>
+
+copyrights:
+  - (c) 2012 Rubyworks (BSD-2-Clause)
+
+created:
+  2012-02-27
+
