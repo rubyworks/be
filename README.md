@@ -9,8 +9,7 @@
 
 [![Build Status](https://secure.travis-ci.org/rubyworks/be.png)](http://travis-ci.org/rubyworks/be)
 
-
-## Description
+<br/>
 
 Be is a fully versitle, light-weight and BRASS compliant assertions framework
 for Ruby. It utilizes an *assertor* design (*matchers* in RSpec terminology)
