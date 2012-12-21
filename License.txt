@@ -1,7 +1,3 @@
-Be - Behavioral Expectations
-
-Copyright (c) 2012 Rubyworks. All rights expressly reserved.
-
 BSD-2-Clause License
 
 Redistribution and use in source and binary forms, with or without modification, are
