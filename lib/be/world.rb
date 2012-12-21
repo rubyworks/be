@@ -4,12 +4,12 @@ require 'be/core_ext'
 require 'be/errors'
 require 'be/assertor'
 require 'be/delegator'
-require 'be/should'
 
 module Be
 
   #
-  module Kernel
+  module World
+    private
 
     # be
     #
@@ -47,6 +47,10 @@ module Be
       end
       Be::Delegator.new(criteria)
     end
+
+    # match
+    #
+    # TODO: How about #match which defaults to #=~ or #===?
 
   end
 

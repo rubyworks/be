@@ -1,6 +1,7 @@
-require 'be/kernel'
+require 'be/expect'
+require 'be/should'
 
 class Object
-  include Be::Kernel
+  include Be::World
 end
 
